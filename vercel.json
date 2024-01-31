@@ -20,5 +20,8 @@
     "PORT_NUMBER": "8000",
     "EMAIL_USER": "iemojis.io@gmail.com",
     "EMAIL_PASS": "hqme eaxe vtoh dbre"
+  },
+  "projectSettings": {
+    "framework": "node"
   }
 }
