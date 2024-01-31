@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Profile {
+  admin 
+  intern
+}
+
+enum UserStatus {
+  active
+  inactive
+}
+
+model User {
+  email      String @id  @db.VarChar(60)
+  name       String @db.VarChar(60)
+  profile    Profile
+  status     UserStatus
+
+  password String @db.VarChar(200)
+  cell_phone_number String @db.VarChar(11) 
+
+  @@unique([cell_phone_number])
+  @@map("users")
+
+  contract_id String?
+  // contract Contract? @relation(fields: [contract_id], references: [id])
+}
+

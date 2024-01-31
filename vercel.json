@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/main.ts",
+      "methods": ["GET", "POST", "PATCH", "PUT", "DELETE"]
+    }
+  ],
+
+  "env": {
+    "DATABASE_URLE": "postgresql://thiagoreis160500:cv5Eydw3tnkV@ep-snowy-band-a5h824od.us-east-2.aws.neon.tech/nest-auth?sslmode=require",
+    "JWT_SECRETE": "eb79e4e87c9e3dcb3156285351ead8dc",
+    "PORT_NUMBER": "8000",
+    "EMAIL_USER": "iemojis.io@gmail.com",
+    "EMAIL_PASS": "hqme eaxe vtoh dbre"
+  }
+}
